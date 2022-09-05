@@ -1,0 +1,395 @@
+/* header styles */
+.Header {
+    max-width: 1170px;
+    width:100%;
+    height: 50.5;
+    margin:0 auto ;
+    padding-top:20px;
+    margin-bottom: 80px;
+}
+
+.Logo {
+    width: 114px;
+    height: 50px;
+}
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-ul {
+    display: flex;
+    justify-content: space-between;
+
+
+}
+.nav-list{
+    color:white;
+    font-family: 'Product Sans Thin', sans-serif;
+    font-style: normal;
+    margin-left:65px;
+    font-size: 20px; 
+}
+
+.nav-ul :hover {
+    text-shadow:  0 0 3px #DF6951, 0 0 5px white;
+}
+
+.sign-up {
+    font-family: 'Product Sans Medium', sans-serif;
+    font-style: bolder;
+    border-style:outset;
+    color:white;
+    border-color: whitesmoke;
+    border-radius: 6px;
+    width: 100px;
+    height: 40px;
+    margin-right: 50px;
+    cursor: pointer;
+    background: none;
+}
+.sign-up:hover{
+    opacity: 0.5;
+}
+
+
+/* first section */
+.First-section {
+    position: relative;
+    margin:0 auto ;
+    width: 100%;
+    height: 657px;
+
+    background-size: cover;
+    background-image: url('https://images.pexels.com/photos/2990848/pexels-photo-2990848.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+}
+
+
+.wrapper {
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translateY(-50%) translateX(-50%);
+  
+}
+
+.wrapper h1 {
+    color:whitesmoke;
+    font-size: 80px;
+    font-family: 'Product Sans Medium', sans-serif;
+    font-style: italic;
+    
+}
+
+/* second section  */
+
+.Second-section { 
+    margin:0 auto ;
+    width: 100%;
+    height: 657px;
+}
+
+.Conteiner {
+    position: relative;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    width: 100%
+}
+
+
+.Left-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    width: 100%;
+    height: 500px;
+    margin-top: 100px;
+    margin-left: 100px;
+    background-color:#E1FFEE;
+    padding: 35px;
+    border-radius: 10px;
+    position: absolute;
+    top: 4px;
+    left: 70px;
+  }
+
+.Left-box h2 {
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-family: 'Product Sans Medium', sans-serif;
+    color: black ;
+
+}
+.Left-box p {
+    margin-top: 10px;
+    font-family: 'Product Sans Medium', sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+    color: rgba(0, 0, 0, 0.555);
+}
+
+.explore_kakheti {
+    margin-top:90px;
+    margin-right: 90px;
+    border-radius: 10px;
+    border: none;
+    height: 60px;
+    width: 230px;
+    color: #E1FFEE;
+    background-color:#2e6843;
+    font-size: larger;
+    cursor:pointer;
+}
+
+.explore_kakheti:hover {
+    opacity: 0.5;
+    width: 260px;
+}
+
+
+.Right-box {
+    background-image: url('images/kakheti.jpg');
+    background-size: cover;
+    width:100%;
+    height: 657px;
+    margin-left:500px;
+    margin-right:10px;
+
+}
+
+/* third section */
+
+.Third-section { 
+    margin:0 auto ;
+    width: 100%;
+    height: 675px;
+    margin-top: 20px;
+}
+
+.slides {
+    display: block;
+}
+
+
+.slider-wrapper {
+    position: relative;
+    width:100%;
+}
+
+.slider-wrapper h1 {
+    color: #222;
+    margin-left:40%;
+    font-family: 'Product Sans Medium', sans-serif;
+    font-size: 40px;
+    margin-bottom: 10px;
+    
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    border: none;
+    background:none;
+    color:gainsboro;
+    font-size: 30px;
+    cursor: pointer;
+}
+.arrleft {
+    left: 30px;
+}
+.arright {
+    right: 30px;
+}
+
+.BGslider {
+    margin: 0 auto;
+    width: 100%;
+    height: 600px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/* footer  */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+
+.footer-distributed{
+    background-color:#E1FFEE;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+
+
+.footer-distributed  span{
+	color:  black;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color: black;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+  font-weight:400;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #222;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: black;
+    font-weight:400;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  rgb(57, 75, 74);
+	text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color: black;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+    font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+    margin-right: 20px;
+	margin-bottom: 5px;
+}
+
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
