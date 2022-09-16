@@ -1,3 +1,5 @@
+// slider //
+
 let DataSlides = [
     {
        id: 1,
@@ -96,9 +98,6 @@ Sliderfunc();
 }
 
 leftArrow.addEventListener('click', LeftArrowClick ) ;
-
-
-
 rightArrow.addEventListener('click', RightArrowClick ) ;
 
 // setInterval(() => {
@@ -106,3 +105,17 @@ rightArrow.addEventListener('click', RightArrowClick ) ;
 // }, 3000);
 
 Sliderfunc();
+
+
+
+// accordion//
+
+let accordion = document.querySelectorAll('.acordion-box');
+
+for (let item of accordion) {
+   item.addEventListener('click', function () {
+     this.classList.toggle('active');
+    });
+
+
+}
