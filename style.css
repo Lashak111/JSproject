@@ -81,7 +81,7 @@
 
 
 /* 2 section  */
-.Conteiner {
+.Container {
     position: relative;
     display: flex;
     margin-top: 20px;
@@ -151,9 +151,8 @@
 .Right-box {
     background-image: url('images/wine.jpg');
     background-size: cover;
-    max-width:1000px;
     width: 100%;
-    height: 657px;
+    height:100vh;
     margin-left:420px;
     margin-right:10px;
 
@@ -163,10 +162,9 @@
 
 .Third-section { 
     margin:0 auto ;
-    /* max-width:1000px; */
+    max-width:1800px;
     width: 100%;
     height: 100vh;
-    margin-bottom: 20px;
     display: flex;
     align-items: center;
 
@@ -175,7 +173,6 @@
 
 .slider-wrapper {
     position: relative;
-    /* max-width:1000px; */
     width:100%;
 }
 
@@ -210,7 +207,6 @@
 
 .BGslider {
     margin: 0 auto;
-    /* max-width:1000px; */
     width: 100%;
     height: 95vh;
     background-size: 100% 100%;
@@ -222,12 +218,13 @@
 
 /* 4 section */
 
-
+.Fourth-section {
+ margin-bottom: 25px;
+}
 .Main-wrapper {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    margin-bottom:10px;
     width:100%;
     padding:35px;
     align-items: center;
@@ -235,7 +232,8 @@
 
 .Main-wrapper-image {
     background-image: url('https://images.pexels.com/photos/7989140/pexels-photo-7989140.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-    width: 360px;
+    max-width: 360px;
+    width: 100%;
     height: 320px;
     background-size: cover;
     border-radius:60%;
@@ -248,8 +246,8 @@
     font-size: 25px;
     text-transform: uppercase;
     font-family:'Product Sans Thin', sans-serif;
-    margin-top: 45px;
-    margin-bottom: 20px;
+    margin-top:15px;
+    margin-bottom:20px;
     font-weight: bolder;
     text-shadow: #fff;
 }
@@ -315,6 +313,7 @@
 
 .Fifth-section {
     display: flex;
+    justify-content: space-between;
 
 }
  .accordion {
@@ -386,15 +385,15 @@
     position: absolute;
 }
 
-.images {
-    margin-left: 20px;
-    max-width: 420px;
+/* .image5 {
+    max-width: 520px;
     width: 100%;
     height: 420px;
+    margin-right:10%;
     background-image: url('images/pexels-element-digital-1051075.jpg');
     background-size: cover;
 }
-
+ */
 
 
 /* footer  */
@@ -403,6 +402,7 @@
 
 
 .footer-distributed{
+    margin-top: 10px;
     background-color: #839AA8;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
