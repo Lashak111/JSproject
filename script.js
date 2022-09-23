@@ -1,3 +1,24 @@
+
+// burger
+
+let Burgermenu = document.querySelector('.menu-btn');
+
+let  menuOpen = false;
+
+Burgermenu.addEventListener('click', () =>{
+    if (!menuOpen){
+        Burgermenu.classList.add('open');
+        menuOpen = true;
+  
+    } else {
+        Burgermenu.classList.remove('open');
+        menuOpen = false;
+    }
+});
+
+
+
+
 // slider //
 
 let DataSlides = [
@@ -119,3 +140,49 @@ for (let item of accordion) {
 
 
 }
+
+
+
+// xmlt https  team
+
+function getUsers() {
+    let Req = new XMLHttpRequest;
+      
+    function render(){
+       let Answer = this.responseText;
+       let jsAnswer = JSON.parse(Answer);
+       console.log(jsAnswer);
+      
+       const fragment = document.createDocumentFragment();
+    
+       jsAnswer.data.forEach(element => {
+        let li = document.createElement ('li');
+        li.classList.add('team-li')
+         let span = document.createElement('span');
+         span.textContent = element.first_name;
+         span.classList.add('teamnames')
+         let img = document.createElement ('img');
+         img.src  = element.avatar;
+         img.classList.add('teamimages');
+
+         li.appendChild(span);
+         li.appendChild(img);
+
+         fragment.appendChild(li);
+        
+        });
+          
+        // document.getElementById("team").innerHTML = "";
+        document.getElementById('team').appendChild(fragment);
+    }
+    
+   Req.addEventListener('load', render);
+   Req.open('GET', 'https://reqres.in/api/users?page=1');
+   Req.send();
+  }
+   
+   getUsers()
+
+
+
+

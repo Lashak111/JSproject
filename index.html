@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
     <script src="https://kit.fontawesome.com/49244a576e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="//cdn.web-fonts.ge/fonts/bpg-banner/css/bpg-banner.min.css">
     <link rel="stylesheet" href="//cdn.web-fonts.ge/fonts/bpg-supersquare-2013/css/bpg-supersquare-2013.min.css">
@@ -17,7 +18,7 @@
       <header class="Header">
         <nav class="navigation">   
            <a href="index.html"> <img class="Logo" src="images/Logo.png" alt="Logo"></a> 
-            <ul class="nav-ul">
+            <ul class="nav-ul" id="Navigation-ul">
                 <li> <a class="nav-list" href="#"> Home</a> </li>
                 <li> <a class="nav-list" href="#Thirdsec"> Destinations</a> </li>
                 <li> <a class="nav-list" href="#about"> About us </a> </li>
@@ -25,6 +26,10 @@
              </ul>
             <a href="signup.html"><button class="sign-up"> Log in</button> </a>  
         </nav>
+        
+        <div class="menu-btn">
+          <div class="menu-btn__burger"> </div>
+       </div>
       </header>
 
       <div class="wrapper">
@@ -37,13 +42,12 @@
    <section class="Second-section">
 
       <div class="Container">
-
           <div class="Left-box">
                <h2> Autumn Best Offer </h1>
-               <p>If you’re  looking for a place that has beautiful mountains, lakes, waterfalls and wineries, gorgeous landscapes, cave monasteries and history on every corner, delicious food and locals who treat every guest as if he were an angel, look no further than Kakheti.</p>
+               <p> Do you want to spend autumn in an environment where this season feels the best? Then you should definitely visit Kakheti, see its beautiful nature, historical places, taste special local cuisine. Kakheti is special in autumn: almost all families are busy picking grapes during the harvest, and then they celebrate the hard work and the gift received from nature together. Kakheti is distinguished by its wine culture, Georgian wine is one of the oldest and special in the history of wine. </p>
                <a href="https://www.google.com/search?q=kakheti&hl=en&sxsrf=ALiCzsZt-jhMHg3Qykuc9K9by4wxfY33hQ%3A1662290015555&source=hp&ei=X4gUY8LdH6eBxc8P2YWkmA4&iflsig=AJiK0e8AAAAAYxSWb4cjjntOP8ualz-CH79yy4xUOlpg&gs_ssp=eJzj4tTP1TcwMTMqMDVg9GLPTszOSC3JBAA1mAWz&oq=kakhet&gs_lcp=Cgdnd3Mtd2l6EAEYADIECC4QJzIECCMQJzIECCMQJzIKCAAQgAQQhwIQFDIFCAAQgAQyBQgAEIAEMgQIABBDMgUIABCABDIFCAAQgAQyBQgAEIAEOgcILhDqAhAnOgcIIxDqAhAnOgQILhBDOgcILhDUAhBDOgoILhCxAxCDARBDOgoIABCxAxCDARBDOgUILhCABFCOBVizCWC9JGgBcAB4AIABwwGIAcwHkgEDMC42mAEAoAEBsAEK&sclient=gws-wiz" target="_blank"> <button class="explore_kakheti"> Explore kakheti </button> </a> 
           </div>
-               <div class="Right-box">   </div>
+               <div class="Right-box"> </div>
       </div>
 
     </section>
@@ -52,7 +56,7 @@
     <section class="Third-section" id="Thirdsec">
 
        <div class=" slider-wrapper" id="slider-Wrapper">
-          <!-- <h1> Top Destinations</h1> -->
+          <h1> Top Destinations</h1>
           <button class="arrow arrleft" id="arrLeft"> < </button>
           <button class="arrow arright" id="arrRight"> > </button>
           <div class=" slidercontent" id="sliderContent"> </div>
@@ -70,20 +74,32 @@
            
         <div class="Main-wrapper-image"></div>
            <p>
-             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis nobis illum quo doloribus tenetur quos, sed laudantium, esse aliquam eaque similique? Officiis eos unde maiores quam aliquid animi? Molestiae, quam.
+            The company "Mestumre" is a Georgian tourism company, whose main goal is to show people the uniqueness of Georgia, hospitality, nature, cuisine and, in general, to make it more visible, pleasant and close to them. Our company consists of friendly staff, experienced people who value cooperation and teamwork. We offer vacationers the unique parts of Georgia, excellent hotels, friendly environment. The word mestumre in Georgian also means ,,Visit me", which further emphasizes the hospitality of Georgians.
            </p>
 
-           <h2> Stay tuned for all the  news</h2>
-           <h4> Enter your email and we will tell you everything here</h4>
-
            <div class="subscribe-block">
-             <input type="text" placeholder="enter your email">
-             <button> subscribe</button>
+             <h2> Stay tuned for all the  news</h2>
+             <h4> Enter your email and we will tell you everything here</h4>
+               <div class="formblock">
+                <input type="text" placeholder="enter your email">
+                <button> subscribe</button>
+              </div>
            </div>
-         
-  
-   </div>
+      </div>   
+
+
+        <div class="team-container">
+
+             <h1 class="ourteam"> our team</h1>
+               
+             <ul id="team">  </ul> 
+              
+        </div> 
+
 </section>
+
+
+
 
 <!-- -------------------------------------------------5 section------------------------------------------- -->
    
@@ -95,30 +111,25 @@
 
              <div class="acordion-box">
                   <h2 class="accordion-title">What’s the best time of year to visit georgia? </h2>
-                  <p class="accordion-content"> Finland is a year-round destination. Winters are great for outdoor activities like downhill skiing, cross-country skiing, skating and ice-swimming. Spring and autumn are the best seasons to see the Northern Lights in Finnish Lapland. Late summer and autumn are ideal for foraging and enjoying colourful autumn foliage. The spring months (until early May) offer the best skiing in Lapland – in the south, the snow will be gone by then. The summer months across Finland are known for their white nights, and in Lapland, as a time when the sun never sets. Big cities have interesting things to see and do all year, and across Finland, it’s always sauna season.</p>
+                  <p class="accordion-content"> Every season in Georgia is special. Spring and autumn are characterized by cool, sunny days, summer is quite hot, and winter is quite cold. However, you can create a special adventure in Georgia in every season: if you want to go to Gudauri, Bakuriani and other excellent ski areas in winter, you will enjoy fresh air and snow. These places are also great in summer: coolness, peace and coziness. And if you decide to visit in the summer, the sea shores, the mountains are always at your disposal. So Georgia is waiting for you in any season! </p>
               </div>
 
              <div class="acordion-box">
                 <h2 class="accordion-title" > Do I need a passport or visa to enter the country?   </h2>
-                <p class="accordion-content"> You need a valid national passport or another equivalent that satisfactorily establishes your identity and nationality. If you aren’t a citizen of Finland or another European Economic Area (EEA) country, you may also need a visa. Please check with your local Finnish Embassy, and they’ll be happy to help you.</p>
+                <p class="accordion-content"> citizens of certain countries can enter Georgia without a visa. However, some restrictions apply, so it's best to check out this site: <a href="https://migration.commission.ge/index.php?article_id=160&clang=1"> https://migration.commission.ge/index.php?article_id=160&clang=1 </a> </p>
              </div>
 
             <div class="acordion-box">
               <h2 class="accordion-title"> What are some basic facts about georgia?    </h2>
-              <p class="accordion-content" > Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, perspiciatis tempore laudantium id laborum repudiandae, unde ea dicta non aspernatur quia, ad doloribus. Illum facilis recusandae vitae nulla blanditiis pariatur.</p>
+              <p class="accordion-content" > The history of Georgia is quite long and diverse. Its culture, literature, art are truly special and have existed since ancient times. In the early 4th century, ethnic Georgians officially adopted Christianity, which contributed to the spiritual and political unification of the early Georgian states. In the Middle Ages, the unified Kingdom of Georgia emerged and reached its Golden Age during the reign of King David IV and Queen Tamar in the 12th and early 13th centuries. In 1783, one of the Georgian kingdoms entered into an alliance with the Russian Empire , which proceeded to annex the territory of modern Georgia in a piecemeal fashion throughout the 19th century. Today, 20 percent of Georgia is occupied by Russia.</p>
             </div>
           
             <div class="acordion-box">
-              <h2 class="accordion-title"> What are some basic facts about georgia?    </h2>
-              <p class="accordion-content" > Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, perspiciatis tempore laudantium id laborum repudiandae, unde ea dicta non aspernatur quia, ad doloribus. Illum facilis recusandae vitae nulla blanditiis pariatur.</p>
+              <h2 class="accordion-title"> Words that every tourist should know in Georgia:  </h2>
+              <p class="accordion-content" > Gamarjoba ( Hello) ,Nakhvamdis ( goodbye ), Madloba( thank you ), Khinkali ( Georgian traditional dish ), Gaumarjos ( cheers )</p>
             </div>
       
-        </div>
-    
-
-        <!-- <div class="image5"></div> -->
-
-
+          </div>
 
     </section>
 
@@ -139,7 +150,7 @@
 					<a href="#">Contact</a>
 				</p>
 
-				<p class="footer-company-name">mestumre © 2015</p>
+				<p class="footer-company-name">mestumre © 2022</p>
 			</div>
 
 			<div class="footer-center">
@@ -168,15 +179,11 @@
 					Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
 				</p>
 
-				<div class="footer-icons">
+				 <div class="footer-icons">
 
 					<a href="#"><i class="fa fa-facebook"></i></a>
 					<a href="#"><i class="fa fa-twitter"></i></a>
 					<a href="#"><i class="fa fa-linkedin"></i></a>
-
-          	<!-- <a href="#"><i class="fa fa-facebook"></i></a>
-					<a href="#"><i class="fa fa-twitter"></i></a>
-					<a href="#"><i class="fa fa-linkedin"></i></a> -->
 
 				</div>
 

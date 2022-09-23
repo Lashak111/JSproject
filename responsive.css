@@ -1,0 +1,49 @@
+@media (max-width: 1024px) {
+    .nav-ul {
+        display: none
+    } 
+     .sign-up{
+        display: none;
+    }
+    
+   .Logo {
+    margin-left: 10px;
+
+  }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .wrapper {
+        text-align: center;
+        font-size:60px;
+    }
+    .Right-box {
+        margin-left:150px;
+    }
+    .Left-box {
+   
+         margin-left:1px;
+      }
+ 
+    #team {
+          flex-wrap:wrap;
+        
+   }
+}
+
+
+@media (max-width: 768px) {
+      .container {
+        display: flex;
+        align-items: center;
+        margin-top: 0%;
+      }
+    
+    .Right-box {
+        background-image: none;
+        
+       
+    }
+}
