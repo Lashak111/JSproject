@@ -1,251 +1,227 @@
-
 // burger
 
-let Burgermenu = document.querySelector('.menu-btn');
+const toggleNav = () => {
+  if (!menuOpen) {
+    Burgermenu.classList.add("open");
+    menuOpen = true;
 
-let  menuOpen = false;
+    nav.classList.add("show");
+  } else {
+    nav.classList.remove("show");
+    Burgermenu.classList.remove("open");
+    menuOpen = false;
+  }
+};
 
-Burgermenu.addEventListener('click', () =>{
-    if (!menuOpen){
-        Burgermenu.classList.add('open');
-        menuOpen = true;
-  
-    } else {
-        Burgermenu.classList.remove('open');
-        menuOpen = false;
-    }
+let Burgermenu = document.querySelector(".menu-btn");
+
+let menuOpen = false;
+const nav = document.getElementById("nav-items");
+
+Burgermenu.addEventListener("click", () => {
+  toggleNav();
 });
 
+nav.addEventListener("click", () => {
+  toggleNav();
+});
 
 // crolltop
 
-let scroll = document.getElementById('Scrooltop');
+let scroll = document.getElementById("Scrooltop");
 
-   scroll.addEventListener('click', () =>  {
-   window.scrollTo({
+scroll.addEventListener("click", () => {
+  window.scrollTo({
     top: 0,
-    behavior: 'smooth',
-   })
-    
-})
+    behavior: "smooth",
+  });
+});
 
-// cookies
+// cookiesbaner local storage
 
-setCookie = (cName, cValue, expDays) => {
-    let date = new Date();
-    date.setTime(date.getTime() + (expDays * 24 * 60 * 60  *1000));
-    const expries = 'expries=' + date.toUTCString();
-    document.cookie = cName + '=' + cValue + ":" + expries + '; path=/';
-}
+const Cookies1 = document.querySelector(".cookies");
+const CookiesBtn = document.querySelector(".cookies_btn");
 
-getcookie = (cName) => {
-    const name = cName + '='
-    const cDecoded = decodeURIComponent(document.cookie);
-    const cArr = cDecoded.split (';');
-    let value;
-    cArr.forEach(val => {
-        if(val.indexOf(name) === 0) value = val.substring(name.length);
-    })
-    return value;
-}
+CookiesBtn.addEventListener("click", () => {
+  Cookies1.classList.remove("active");
+  localStorage.setItem("cookiebanner", "true");
+});
 
-document.getElementById('cookies_btn').addEventListener('click', () => {
-    document.getElementById('cookies').style.display = 'none';
-    setCookie('cookie', true, 30);
-})
-
-cookieMessage = () => {
-    if (!getcookie('cookie')) 
-    document.getElementById('cookies').style.display = 'block';
-        
-    }
-
-    window.addEventListener('load', cookieMessage);
-
-
+setTimeout(() => {
+  if (!localStorage.getItem("cookiebanner")) {
+    Cookies1.classList.add("active");
+  }
+}, 1500);
 
 // slider //
 
-
 let DataSlides = [
-    {
-       id: 1,
-       imgUrl:'images/Tbilisi.jpg',
-       title: '',
-       url : 'https://www.google.com/',
-    } ,
+  {
+    id: 1,
+    imgUrl: "images/Tbilisi.jpg",
+    title: "",
+    url: "https://www.google.com/",
+  },
 
-    {
-        id: 2,
-        imgUrl:'images/Adjara.jpg',
-        title: ' ',
-        url : 'https://www.google.com/',
-     },
+  {
+    id: 2,
+    imgUrl: "images/Adjara.jpg",
+    title: " ",
+    url: "https://www.google.com/",
+  },
 
-     {
-        id: 3,
-        imgUrl:'images/Svaneti.jpg',
-        title: ' ', 
-        url : 'https://www.google.com/',
-     },
+  {
+    id: 3,
+    imgUrl: "images/Svaneti.jpg",
+    title: " ",
+    url: "https://www.google.com/",
+  },
 
-     {
-        id: 4,
-        imgUrl:'images/Kakheti1.jpg',
-        title: ' ',
-        url : 'https://www.google.com/',
-     },
-]
+  {
+    id: 4,
+    imgUrl: "images/Kakheti1.jpg",
+    title: " ",
+    url: "https://www.google.com/",
+  },
+];
 
-const leftArrow = document.getElementById ('arrLeft');
-const rightArrow = document.getElementById ('arrRight');
-const sliderContent = document.getElementById ('sliderContent');
+const leftArrow = document.getElementById("arrLeft");
+const rightArrow = document.getElementById("arrRight");
+const sliderContent = document.getElementById("sliderContent");
 
-let sliderindex = 0 ;
+let sliderindex = 0;
 
+function Atagfunction(item) {
+  const Atagelement = document.createElement("span");
+  Atagelement.setAttribute("href", item.url);
+  Atagelement.classList.add("slides");
 
-function Atagfunction (item) {
-const Atagelement = document.createElement ('span');
-Atagelement.setAttribute('href', item.url);
-Atagelement.classList.add('slides');
-
-return Atagelement
+  return Atagelement;
 }
 
-function imgtagfunction (item){
- const tagBgImage = document.createElement ('div');
- tagBgImage.style.backgroundImage = ` url(${item.imgUrl})`;
- tagBgImage.classList.add('BGslider')
+function imgtagfunction(item) {
+  const tagBgImage = document.createElement("div");
+  tagBgImage.style.backgroundImage = ` url(${item.imgUrl})`;
+  tagBgImage.classList.add("BGslider");
 
- return tagBgImage
-
+  return tagBgImage;
 }
 
-function H2tagfunction (item) {
-const H2tag = document.createElement ('h2');
-H2tag.textContent = item.title;
-H2tag.classList.add('slidetitle');
+function H2tagfunction(item) {
+  const H2tag = document.createElement("h2");
+  H2tag.textContent = item.title;
+  H2tag.classList.add("slidetitle");
 
-return H2tag 
+  return H2tag;
 }
 
+function Sliderfunc() {
+  sliderContent.innerHTML = "";
+  const slideritem = Atagfunction(DataSlides[sliderindex]);
+  const Images = imgtagfunction(DataSlides[sliderindex]);
+  const titles = H2tagfunction(DataSlides[sliderindex]);
 
-function Sliderfunc () {
-sliderContent.innerHTML = '';
-const slideritem = Atagfunction(DataSlides[sliderindex]);
-const Images = imgtagfunction(DataSlides[sliderindex]);
-const titles = H2tagfunction (DataSlides[sliderindex]);
+  slideritem.appendChild(Images);
+  slideritem.appendChild(titles);
 
-slideritem.appendChild(Images);
-slideritem.appendChild(titles);
-
-sliderContent.appendChild(slideritem);
-console.log(slideritem);
+  sliderContent.appendChild(slideritem);
+  console.log(slideritem);
 }
 
 function LeftArrowClick() {
-if (sliderindex == 0) {
-sliderindex = DataSlides.length - 1 ;
-Sliderfunc();
-return;
-
-}
-sliderindex -=1;
-Sliderfunc();
-}
-
-function RightArrowClick (){
-if (sliderindex == DataSlides.length - 1) {
-sliderindex = 0
-Sliderfunc();
-return;
-}
-sliderindex +=1;
-Sliderfunc();
+  if (sliderindex == 0) {
+    sliderindex = DataSlides.length - 1;
+    Sliderfunc();
+    return;
+  }
+  sliderindex -= 1;
+  Sliderfunc();
 }
 
-leftArrow.addEventListener('click', LeftArrowClick ) ;
-rightArrow.addEventListener('click', RightArrowClick ) ;
+function RightArrowClick() {
+  if (sliderindex == DataSlides.length - 1) {
+    sliderindex = 0;
+    Sliderfunc();
+    return;
+  }
+  sliderindex += 1;
+  Sliderfunc();
+}
 
+leftArrow.addEventListener("click", LeftArrowClick);
+rightArrow.addEventListener("click", RightArrowClick);
 
 Sliderfunc();
-
-
 
 // accordion//
 
-let accordion = document.querySelectorAll('.acordion-box');
+let accordion = document.querySelectorAll(".acordion-box");
 
 for (let item of accordion) {
-   item.addEventListener('click', function () {
-     this.classList.toggle('active');
-    });
-
-
+  item.addEventListener("click", function () {
+    this.classList.toggle("active");
+  });
 }
-
-
 
 // xmlt https  team
 
 function getUsers() {
-    let Req = new XMLHttpRequest;
-      
-    function render(){
-       let Answer = this.responseText;
-       let jsAnswer = JSON.parse(Answer);
-       console.log(jsAnswer);
-      
-       const fragment = document.createDocumentFragment();
-    
-       jsAnswer.data.forEach(element => {
-        let li = document.createElement ('li');
-        li.classList.add('team-li')
-         let span = document.createElement('span');
-         span.textContent = element.first_name;
-         span.classList.add('teamnames')
-         let img = document.createElement ('img');
-         img.src  = element.avatar;
-         img.classList.add('teamimages');
+  let Req = new XMLHttpRequest();
 
-         li.appendChild(span);
-         li.appendChild(img);
+  function render() {
+    let Answer = this.responseText;
+    let jsAnswer = JSON.parse(Answer);
+    console.log(jsAnswer);
 
-         fragment.appendChild(li);
-        
-        });
-          
-        document.getElementById('team').appendChild(fragment);
-    }
-    
-   Req.addEventListener('load', render);
-   Req.open('GET', 'https://reqres.in/api/users?page=1');
-   Req.send();
+    const fragment = document.createDocumentFragment();
+
+    jsAnswer.data.forEach((element) => {
+      let li = document.createElement("li");
+      li.classList.add("team-li");
+      let span = document.createElement("span");
+      span.textContent = element.first_name;
+      span.classList.add("teamnames");
+      let img = document.createElement("img");
+      img.src = element.avatar;
+      img.classList.add("teamimages");
+
+      li.appendChild(span);
+      li.appendChild(img);
+
+      fragment.appendChild(li);
+    });
+
+    document.getElementById("team").appendChild(fragment);
   }
-   
-   getUsers()
 
+  Req.addEventListener("load", render);
+  Req.open("GET", "https://reqres.in/api/users?page=1");
+  Req.send();
+}
 
+getUsers();
 
-// subscribe email with fetch 
+// subscribe email with fetch
 
-const form = document.getElementById('formblock');
+document.getElementById("form").addEventListener("submit", function (e) {
+  e.preventDefault();
+  const emailInput = document.getElementById("Emails");
 
-form.addEventListener('Submit', event => {
-   
-   preventDefault();
-    
-     const formdata = new Formdata(form);
-     const data = Object.fromEntries(formdata);
+  const userEmails = emailInput.value;
+  debugger;
 
-     fetch('https://reqres.in/api/users', {
-        method: 'POST',
-        headers:{
-            'Content-Type' : 'application/json'
-        },
-        body:JSON.stringify(data)
-     }).then(res => res.json())
-       .then(data => console.log(data))
-       .catch(error => console.log(error));
+  const formdata = new FormData();
+  formdata.append("user-emails", userEmails);
 
+  fetch("https://httpbin.org/post", {
+    method: "POST",
+    body: formdata,
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      console.log(emailInput);
+      emailInput.value = "";
+    })
+    .catch((err) => console.log(err));
 });

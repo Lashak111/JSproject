@@ -1,85 +1,107 @@
 @media (max-width: 1024px) {
-    .nav-ul {
-        display: none
-    } 
-     .sign-up{
-        display: none;
-    }
-    
-   .Logo {
-    margin-left: 10px;
-
+  .nav-items {
+    display: none;
   }
 
-    .menu-btn {
-        display: block;
-    }
+  .nav-list {
+    margin-left: 0px;
+    display: block;
+    text-align: center;
+    padding: 15px 0;
+  }
 
-    .wrapper {
-        text-align: center;
-        font-size:60px;
-    }
+  .nav-ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 70px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 0px;
+  }
 
-  .Third-section { 
+  .sign-up {
+    display: none;
+  }
+
+  .Logo {
+    margin-left: 10px;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .wrapper {
+    text-align: center;
+    font-size: 60px;
+  }
+
+  .Third-section {
     height: 75vh;
- } 
+  }
 
-    .BGslider {
-        margin: 0 auto;
-        width: 100%;
-        height:75vh;
-        background-repeat: no-repeat;
-        object-fit: cover;
-        border-radius: 10px;
-    }
-    
-    .Right-box {
-        margin-left:150px;
-    }
+  .BGslider {
+    margin: 0 auto;
+    width: 100%;
+    height: 75vh;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    border-radius: 10px;
+  }
 
-    .Left-box {
-   
-        margin-top:20%;
-       
-      }
- 
-    #team {
-          flex-wrap:wrap;
-        
-   }
+  .Right-box {
+    margin-left: 150px;
+  }
+
+  .Left-box {
+    margin-top: 10%;
+  }
+
+  #team {
+    flex-wrap: wrap;
+  }
 }
 
-
 @media (max-width: 768px) {
-    
-    .Left-box {
-        margin-top:20%;
-      
-    }
+  .Left-box {
+    margin-top: 5%;
+    max-width: 500px;
+    width: 100%;
+    height: 400px;
+  }
+  .Left-box h2 {
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "Product Sans Thin", sans-serif;
+    color: black;
+  }
+  .Left-box p {
+    text-align: center;
+    margin-top: 10px;
+    font-family: "Product Sans Thin", sans-serif;
+    font-size: 18px;
+    line-height: 1.3;
+    color: white;
+  }
 
-        
-    .Right-box {
-        background-image: url('images/wine.jpg');
-        background-size: cover;
-        max-width:500px;
-        width: 100%;
-        height:80vh;
-        margin-left:200px;
-        margin-right:1px;
-    }
+  .explore_kakheti {
+    margin-top: 20px;
+  }
 
-
-   
-    .Third-section { 
+  .Third-section {
     height: 60vh;
-} 
+  }
 
-    .BGslider {
-        margin: 0 auto;
-        width: 100%;
-        height:60vh;
-        background-repeat: no-repeat;
-        object-fit: cover;
-        border-radius: 10px;
-    }
+  .BGslider {
+    margin: 0 auto;
+    width: 100%;
+    height: 60vh;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    border-radius: 10px;
+  }
 }
