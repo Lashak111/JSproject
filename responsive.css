@@ -19,12 +19,28 @@
         text-align: center;
         font-size:60px;
     }
+
+  .Third-section { 
+    height: 75vh;
+ } 
+
+    .BGslider {
+        margin: 0 auto;
+        width: 100%;
+        height:75vh;
+        background-repeat: no-repeat;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    
     .Right-box {
         margin-left:150px;
     }
+
     .Left-box {
    
-         margin-left:1px;
+        margin-top:20%;
+       
       }
  
     #team {
@@ -35,15 +51,35 @@
 
 
 @media (max-width: 768px) {
-      .container {
-        display: flex;
-        align-items: center;
-        margin-top: 0%;
-      }
     
-    .Right-box {
-        background-image: none;
+    .Left-box {
+        margin-top:20%;
+      
+    }
+
         
-       
+    .Right-box {
+        background-image: url('images/wine.jpg');
+        background-size: cover;
+        max-width:500px;
+        width: 100%;
+        height:80vh;
+        margin-left:200px;
+        margin-right:1px;
+    }
+
+
+   
+    .Third-section { 
+    height: 60vh;
+} 
+
+    .BGslider {
+        margin: 0 auto;
+        width: 100%;
+        height:60vh;
+        background-repeat: no-repeat;
+        object-fit: cover;
+        border-radius: 10px;
     }
 }

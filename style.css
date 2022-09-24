@@ -1,6 +1,9 @@
 /* 1 section */
-
+body{
+    font-family: 'Product Sans Thin', sans-serif; 
+}
 /* header styles */
+
 .Header {
     max-width: 1170px;
     width:100%;
@@ -135,6 +138,65 @@
   
 }
 
+.scroll {
+    position:fixed;
+    right: 25px;
+    bottom: 25px;
+    background-color: cadetblue;
+}
+.scrollicon {
+    color: #222;
+    margin-top:10px;
+}
+
+/* cookies */
+.cookies-section {
+    left: 50%;
+    top: 50%;
+    position: fixed;
+    transform: translateX(-50%) translateY(-50%);
+    max-width:800px;
+    width:100%;
+   background-color: #fff;
+   border-radius: 15px;
+}
+#cookies {
+    max-width:800px;
+    width:100%;
+    display: none;
+    border-radius: 10px;
+    background-size: cover;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#cookies img {
+    width: 300px;
+    height: 30vh;
+}
+
+
+#cookies_btn {
+    width: 150px;
+    margin-top: 15px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color:#839AA8
+}
+#cookies h3 {
+    color: #222;
+    font-weight: bold;
+    font-size: 25px;
+   
+}
+#cookies p {
+    /* width: 400px; */
+    margin-top: 15px;
+    font-size: 19px;
+}
+ 
 
 /* 2 section  */
 .Container {
@@ -153,14 +215,13 @@
     max-width: 500px;
     width: 100%;
     height: 500px;
-    margin-top: 100px;
+    margin-top:10%;
     margin-left:70px;
     background-color: #839AA8;
     padding: 35px;
     border-radius: 10px;
     position: absolute;
-    top: 4px;
-    left: 70px;
+    
   }
 
 .Left-box h2 {
@@ -218,7 +279,8 @@
 
 .Third-section { 
     margin:0 auto ;
-    max-width:1170px;
+    /* max-width:1170px; */
+    max-width: 1500px;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -421,6 +483,7 @@
 /* 5 section */
 
 .Fifth-section {
+    margin-top: 25px;
     display: flex;
     justify-content: space-between;
 
@@ -494,15 +557,6 @@
     position: absolute;
 }
 
-/* .image5 {
-    max-width: 520px;
-    width: 100%;
-    height: 420px;
-    margin-right:10%;
-    background-image: url('images/pexels-element-digital-1051075.jpg');
-    background-size: cover;
-}
- */
 
 
 /* footer  */

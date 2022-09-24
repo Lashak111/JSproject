@@ -17,9 +17,55 @@ Burgermenu.addEventListener('click', () =>{
 });
 
 
+// crolltop
+
+let scroll = document.getElementById('Scrooltop');
+
+   scroll.addEventListener('click', () =>  {
+   window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+   })
+    
+})
+
+// cookies
+
+setCookie = (cName, cValue, expDays) => {
+    let date = new Date();
+    date.setTime(date.getTime() + (expDays * 24 * 60 * 60  *1000));
+    const expries = 'expries=' + date.toUTCString();
+    document.cookie = cName + '=' + cValue + ":" + expries + '; path=/';
+}
+
+getcookie = (cName) => {
+    const name = cName + '='
+    const cDecoded = decodeURIComponent(document.cookie);
+    const cArr = cDecoded.split (';');
+    let value;
+    cArr.forEach(val => {
+        if(val.indexOf(name) === 0) value = val.substring(name.length);
+    })
+    return value;
+}
+
+document.getElementById('cookies_btn').addEventListener('click', () => {
+    document.getElementById('cookies').style.display = 'none';
+    setCookie('cookie', true, 30);
+})
+
+cookieMessage = () => {
+    if (!getcookie('cookie')) 
+    document.getElementById('cookies').style.display = 'block';
+        
+    }
+
+    window.addEventListener('load', cookieMessage);
+
 
 
 // slider //
+
 
 let DataSlides = [
     {
@@ -121,9 +167,6 @@ Sliderfunc();
 leftArrow.addEventListener('click', LeftArrowClick ) ;
 rightArrow.addEventListener('click', RightArrowClick ) ;
 
-// setInterval(() => {
-//    RightArrowClick();
-// }, 3000);
 
 Sliderfunc();
 
@@ -172,7 +215,6 @@ function getUsers() {
         
         });
           
-        // document.getElementById("team").innerHTML = "";
         document.getElementById('team').appendChild(fragment);
     }
     
@@ -185,4 +227,25 @@ function getUsers() {
 
 
 
+// subscribe email with fetch 
 
+const form = document.getElementById('formblock');
+
+form.addEventListener('Submit', event => {
+   
+   preventDefault();
+    
+     const formdata = new Formdata(form);
+     const data = Object.fromEntries(formdata);
+
+     fetch('https://reqres.in/api/users', {
+        method: 'POST',
+        headers:{
+            'Content-Type' : 'application/json'
+        },
+        body:JSON.stringify(data)
+     }).then(res => res.json())
+       .then(data => console.log(data))
+       .catch(error => console.log(error));
+
+});
