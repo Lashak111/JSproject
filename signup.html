@@ -6,24 +6,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="signup.css">
     <script src="https://kit.fontawesome.com/49244a576e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="//cdn.web-fonts.ge/fonts/bpg-banner/css/bpg-banner.min.css">
     <link href="http://fonts.cdnfonts.com/css/google-sans" rel="stylesheet">
     <title>Visit georgia</title>
 </head>
-<body style="background-color: blue ;">
     
     <header class="Header">
         <nav class="navigation">   
            <a href="index.html"> <img class="Logo" src="images/Logo.png" alt="Logo"></a> 
             <ul class="nav-ul">
-                <li> <a class="nav-list" href="index.html"> < Home</a> </li>
+                <li> <a class="nav-list" href="index.html">  <i class="fa-sharp fa-solid fa-arrow-left"></i> Home</a> </li>
             </ul>
-          <a href=""><button class="sign-up"> Sign up</button> </a>  
         </nav>
       </header>
 
+ <!-- formsection -->
+<section class="signup-section">
+      <h2>Welcome</h2>
+
+  <div class="container-signup" id="container">
+
+	 <div class="form-container register-container">
+		<form action="#">
+			<h1>Create Account</h1>
+			<input type="text" placeholder="Name" />
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" />
+			<input type="password" placeholder=" Repeat Password" />
+			<label for="checkbox"> accept terms and conditions</label>
+			<input type="checkbox"  name="checkbox">
+		     <button>Sign up</button>
+		</form>
+	 </div>
 
 
+	 <div class="form-container log-in-container hidden">
+		<form action="#">
+			<h1>Sign in</h1>
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" />
+			<label for="checkbox1"> save email</label>
+			<input type="checkbox" name="checkbox1">
+			<button>Sign In</button>
+		</form>
+	 </div>
+ </div>
+</section>
+
+
+<!-- ----------footer -->
+<footer class="footer-distributed" id="footer">
+	<div class="footer-left">
+	  <a href="index.html">
+		<img class="footer-Logo" src="images/Logo.png" alt="Logo"
+	  /></a>
+
+	  <p class="footer-links">
+		<a href="index.html" class="link-1">Home</a>
+		<a href="#about"> About us </a>
+		<a href="#Thirdsec"> Destinations </a>
+		<a href="#footer">Contact</a>
+	  </p>
+
+	  <p class="footer-company-name">mestumre © 2022</p>
+	</div>
+
+	<div class="footer-center">
+	  <div>
+		<i class="fa fa-map-marker"></i>
+		<p><span>  36 vaja pshavela avenue </span> Tbilisi</p>
+	  </div>
+
+	  <div>
+		<i class="fa fa-phone"></i>
+		<p>+995555444333</p>
+	  </div>
+
+	  <div>
+		<i class="fa fa-envelope"></i>
+		<p><a href="mailto:support@company.com">mestumre@company.com</a></p>
+	  </div>
+	</div>
+
+	<div class="footer-right">
+	  <p class="footer-company-about">
+		<span>About Mestumre</span>
+		The company "Mestumre" is a Georgian tourism company, whose main goal
+		is to show people the uniqueness of Georgia, hospitality, nature,
+		cuisine and, in general, to make it more visible, pleasant and close
+		to them.
+	  </p>
+
+	  <div class="footer-icons">
+		<a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+		<a href="https://twitter.com/?lang=en" target="_blank"><i class="fa fa-twitter"></i></a>
+		<a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin"></i></a>
+	  </div>
+	</div>
+  </footer>
+
+ <script src="form.js"></script>
 
 </body>
