@@ -26,7 +26,7 @@ nav.addEventListener("click", () => {
   toggleNav();
 });
 
-// crolltop
+// scrolltop
 
 let scroll = document.getElementById("Scrooltop");
 

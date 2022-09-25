@@ -1,20 +1,16 @@
-/* 1 section */
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300;1,900&display=swap");
 body {
-  /* font-family: 'Product Sans Thin', sans-serif ; */
   font-family: "Lato", sans-serif;
 }
-/* header styles */
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 70px;
 }
 
-.show {
-  display: block !important;
-}
+/* 1 section */
 
+/* header styles */
 .Header {
   width: 100%;
   height: 50.5;
@@ -27,6 +23,10 @@ html {
   background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: space-between;
+}
+
+.show {
+  display: block !important;
 }
 
 .Logo {
@@ -190,7 +190,6 @@ html {
   font-size: 25px;
 }
 .cookies p {
-  /* width: 400px; */
   margin-top: 15px;
   font-size: 19px;
 }
@@ -298,7 +297,7 @@ html {
   font-size: 32px;
   font-weight: bolder;
   text-transform: uppercase;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .arrow {
