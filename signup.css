@@ -60,18 +60,22 @@ body {
 	align-items: center;
 	flex-direction: column;
 	height: 100vh;
+
 }
 
 .container-signup {
-	display: flex;
-	justify-content: space-between;
 	background-color: #fff;
 	border-radius: 10px;
   	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
 	0 10px 10px rgba(0,0,0,0.22);
-	width:768px;
-	max-width: 100%;
+	width:100%;
+	max-width: 768px;
 	min-height: 480px;
+	
+}
+
+#Registration {
+	margin: 0 auto;
 }
 
 
@@ -142,5 +146,9 @@ button {
 
 
 
+.error-text {
+	color: rgba(58, 56, 56, 0.897);
+	font-weight: bold;
+	font-size: 16px;
 
-
+}
