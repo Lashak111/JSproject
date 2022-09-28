@@ -29,14 +29,33 @@
   <div class="container-signup" id="container">
 
 	 <div class="form-container register-container">
-		<form action="#">
+		<form action="#" id="Registration">
 			<h1>Create Account</h1>
-			<input type="text" placeholder="Name" />
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
-			<input type="password" placeholder=" Repeat Password" />
+
+		<!-- <div> -->
+			  <input type="text" name="username" id="Username" placeholder="Name" />
+			  <div class="error-text" id="error_username"></div>
+		<!-- </div> -->
+
+		<!-- <div> -->
+			<input type="email" name="email"   id="Email" placeholder="Email" />
+			<div class="error-text" id="error_email"></div>
+		<!-- </div> -->
+
+		<!-- <div> -->
+			<input type="password" name="password" id="Password" placeholder="Password" />
+			<div class="error-text" id="error_password"></div>
+		<!-- </div> -->
+
+		<!-- <div> -->
+		<input type="password" name="password2" id="Password2" placeholder=" Repeat Password"/>
+		<div class="error-text" id="error_password2"></div>
+	    <!-- </div> -->
+
+		<div>
 			<label for="checkbox"> accept terms and conditions</label>
-			<input type="checkbox"  name="checkbox">
+			 <input type="checkbox"  name="checkbox">
+		</div>  
 		     <button>Sign up</button>
 		</form>
 	 </div>
