@@ -162,19 +162,19 @@ html {
   left: 0%;
   bottom: -180%;
   position: fixed;
-  max-width: 600px;
   width: 100%;
   padding: 20px;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.932);
+  background-color: rgba(255, 255, 255, 0.938);
   border-radius: 15px;
+  z-index: 1;
 }
 
 .cookies.active {
-  bottom:0;
+  bottom: 0;
 }
 
 .cookies_btn {
@@ -269,7 +269,7 @@ html {
 
 .Right-box img {
   height: 100%;
-  width: auto;
+  width: 100%;
 }
 
 .offer > div {
@@ -280,7 +280,7 @@ html {
 
 .Third-section {
   margin: 0 auto;
-  max-width: 1500px;
+  max-width: 1170px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -302,14 +302,13 @@ html {
   border-radius: 10px;
 }
 
-
 .slider-wrapper h1 {
   color: #222;
   text-align: center;
   font-size: 32px;
   font-weight: bolder;
   text-transform: uppercase;
-  margin-bottom:20px;
+  margin-bottom: 20px;
   margin-top: 20px;
 }
 
@@ -321,7 +320,7 @@ html {
   border: none;
   background: none;
   color: gainsboro;
-  font-size: 50px;
+  font-size: 40px;
   cursor: pointer;
 }
 .arrleft {
@@ -330,8 +329,6 @@ html {
 .arright {
   right: 30px;
 }
-
-
 
 /* 4 section */
 
@@ -482,7 +479,7 @@ html {
 
 .questions::before {
   content: "";
-  width: 550px;
+  max-width: 550px;
   height: 2px;
   background-color: #33383b;
   display: block;

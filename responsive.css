@@ -21,7 +21,6 @@
     padding: 15px 0px;
   }
 
-
   .menu-btn {
     display: block;
   }
@@ -31,9 +30,85 @@
     font-size: 60px;
   }
 
+  .Left-box {
+    padding: 20px;
+  }
+
+  .Right-box > div {
+    width: 400px;
+    height: 400px;
+  }
+
+  .BGslider {
+    height: 80vh;
+  }
   #team {
     flex-wrap: wrap;
   }
- 
 }
 
+@media (max-width: 768px) {
+  .Second-section {
+    margin-bottom: 100px;
+  }
+  .Container {
+    flex-wrap: wrap;
+  }
+
+  .Left-box {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .Right-box > div {
+    margin-top: 10px;
+    width: 400px;
+    height: 400px;
+  }
+
+  .BGslider {
+    height: 70vh;
+  }
+  .arrleft {
+    left: 20px;
+  }
+  .arright {
+    right: 20px;
+  }
+  .accordion-title::before {
+    font-size: 28px;
+    top: 50%;
+    right: 5px;
+  }
+  .acordion-box.active .accordion-title::before {
+    font-size: 28px;
+    top: 50%;
+    right: 5px;
+  }
+}
+
+@media (max-width: 650px) {
+  .BGslider {
+    height: 60vh;
+  }
+  .formblock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .formblock button {
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .BGslider {
+    height: 50vh;
+  }
+  .Right-box > div {
+    margin-top: 20px;
+    width: 300px;
+    height: 300px;
+  }
+}

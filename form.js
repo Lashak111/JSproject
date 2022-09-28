@@ -11,20 +11,31 @@ form.addEventListener("submit", function (event) {
 
   if (username.lenght < 5 || username == "") {
     errors.username = " username cant be empty ";
-  };
+  }
 
   let password = document.getElementById("Password").value;
   let password2 = document.getElementById("Password2").value;
 
   if (password != password2) {
     errors.password2 = " passwords dont macth";
-  };
+  }
 
   let checkbox = document.getElementById("checkbox").checked;
 
   if (checkbox == false) {
     errors.checkbox = " you must agree our terms ";
-  };
+  }
+
+  let gender = false;
+  form.querySelectorAll('[name = "gender"]').forEach((item) => {
+    if (item.checked) {
+      gender = true;
+    }
+  });
+
+  if (!gender) {
+    errors.gender = "Please select your gender";
+  }
 
   form.querySelectorAll(".error-text").forEach((item) => {
     item.innerHTML = "";
@@ -36,7 +47,7 @@ form.addEventListener("submit", function (event) {
     if (errorDiv) {
       errorDiv.textContent = errors[item];
     }
-  };
+  }
   if (Object.keys(errors).length == 0) {
     form.submit();
   }

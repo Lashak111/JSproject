@@ -53,6 +53,15 @@ body {
 
 
 /* form */
+.gender {
+	display: flex;
+	align-items: center;
+	padding: 10px;
+
+}
+.gender-radio{
+	margin-left: 20px;
+}
 
 .signup-section {
 	display: flex;
